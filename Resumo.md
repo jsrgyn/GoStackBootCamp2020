@@ -18,3 +18,9 @@ Terminal Oh My Zsh é Linux e Mac.
 [Git/Github]
 ver versão: git --version
 Apos instalar o git fazer o processo setup. https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+[Extensões]
+--JSON Viewer=Ver ver o JSON formatado no chrome.
+Confirgurar o thema dracula
+--React Dev Tools=Para ver as extrutura dos compotentes do react no inspecinar elemento.
+--Octotree=Navegar nas extrutura do repositorio git.

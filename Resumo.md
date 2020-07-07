@@ -2,6 +2,8 @@ VSC Git: https://imasters.com.br/desenvolvimento/use-git-com-interface-grafica-v
 
 https://github.com/159356-1702-Extramural/capstone/wiki/Step-by-Step-Branch-and-Merge-using-VS-Code
 
+##Ambiente de Desenvolvimento
+
 [Node e Yarn]
 Instalando Node
 Instalar por pacote.
@@ -24,3 +26,11 @@ Apos instalar o git fazer o processo setup. https://git-scm.com/book/en/v2/Getti
 Confirgurar o thema dracula
 --React Dev Tools=Para ver as extrutura dos compotentes do react no inspecinar elemento.
 --Octotree=Navegar nas extrutura do repositorio git.
+
+[Ferramentas]
+--Notion=Aplicativo de notas https://www.notion.so
+--Whimsical=Para fluxograma; Fluxo aplicação
+--DevDocs=Centralizador de Documentação das tecnologia (Html; JavaScript; etc...)
+--Insomnia ou postman= Fazer requisições da API;
+
+##Nível 01

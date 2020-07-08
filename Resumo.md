@@ -72,10 +72,44 @@ yarn init -y
 yarn add express
 node .\src\index.js --execultado a aplicação.
 http://localhost:3333/projects
-Parei no configurando Nodemon.
 --Configurando Nodemon
+yarn add nodemon -D
+Executando o nodemon
+yarn nodemon src/index.js
+Editando o packge.json
+o main para "src/index.js"
+e tag scripts: { "dev": "nodemon src/index.js"} e com main editado apenas scripts: { "dev": "nodemon"} e ele busca o restante do comando no main. e comando agora fica sendo apenas "yarn dev"
+Para incluir emoji no wind é "Wind+." no mac "comand+contr+space"
 --Métodos HTTP
+
+- GET: Buscar informações do back-end
+- POST: Criar uma informação no back-end
+- PUT/PATCH: Alterar uma informação no back-end
+- PUT: Alterar toda informação
+- PATCH: Alterar um informação especifica.
+- DELETE: Deletar uma informação no back-end
+
 --Utilizando o Insomnia
+Codigo de font aberto: https://github.com/Kong/insomnia e desenvolvido com elctronjs https://www.electronjs.org/apps/insomnia
+Só funciona com 64bit.
+Duas alternativa: Postman ou https://postwoman.io/pt-br
+instalando o thema do dracula no Insomnia: https://draculatheme.com/insomnia/
+Comando git clone https://github.com/dracula/insomnia.git C:\Users\Johnathan\insomnia-dracula ou pelo mac git clone https://github.com/dracula/insomnia.git ~\insomnia-dracula
+
+Manage Environments: dev {
+"base_url": "http://localhost:3333"
+} e as url: {{ base_url  }}/projects/1
+
 --Tipos de Parâmetros
---Aplicação Funcional
---Middlewares
+
+- Query Params: Filtros e paginação
+- Exemplo: http://localhost:3333/projects?title=React&owner=Diego
+- Route Params: Identificar recursos (Atualizar/Deletar);
+- Exemplo: http://localhost:3333/projects/1
+- Request Body: Conteúdo na hora criar ou editar um recurso. (JSON)
+  --Aplicação Funcional
+  yarn add uuidv4 => Cria um unique id universal
+  --Middlewares
+  Interceptador de requisições que interromper totalmente a requisição ou alterar dados da requisição.
+  //Middleware
+  function validadeProjectId(request, response, next)

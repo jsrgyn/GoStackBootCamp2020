@@ -257,7 +257,7 @@ yarn webpack-dev-server --mode development
   _/
 
 --Componentização
-
+Parei para iniciar aqui.
 --Propriedades
 --Estado de Imutabilidade
 --Importando CSS e imagens

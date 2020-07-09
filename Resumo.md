@@ -113,3 +113,153 @@ Manage Environments: dev {
   Interceptador de requisições que interromper totalmente a requisição ou alterar dados da requisição.
   //Middleware
   function validadeProjectId(request, response, next)
+  @Front-end com ReactJS
+  --Conceitos ReactJS
+  O que é React?
+  *Biblioteca para construção de interfaces;
+  *Utilizado para construção de Single-Page Applications;
+  *Podemos chamar de framework?
+  *Tudo fica dentro do Javascript;
+  \*React/ReactJS / React Native;
+  Exemplo do react
+  [
+  import React from 'react';
+
+      import './button.css';
+      import icon from './button.png'
+
+      function Button() {
+        return (
+          <button>
+            <img src={icon} />
+          </button>
+        );
+      }
+
+  ]
+  Vantagens
+  *Organização do código;
+  *Componentização;
+  *Divisão de responsabilidades;
+  *Back-end: Regra de negócio
+  *Front-end: Interface
+  *Uma API, múltiplos clientes;
+  *Back-end --> Web --> Mobile;
+  *Programação declarativa;
+
+  JSX
+  *Escrever HTML dentro do JavaScript;
+  *Com React podemos criar nossos próprios elementos;
+
+  Exemplo sem JSX
+  [
+  //Antes
+  function Button() {
+  return React.createElement(
+  'button',
+  {React.createElement(
+  'span',
+  {class: 'icon'}
+  )
+  )
+  }
+  <button type="button">
+  <span class="icon"></span>
+  </button>
+  ]
+  Exemplo com JSX
+  [
+  //Com JSX
+  function Button() {
+  return (
+  <button type="button">
+  <span class="icon"></span>
+  </button>
+  )
+  }
+  ]
+
+  //Nossos próprios elementos
+  //(componentes)
+  function Header() {
+  return <Button />
+  }
+
+  Programação Imperativo vc declarativo
+  Exemplo Imperativo
+  [
+  const notificacoes = 0;
+  function montaBadge(num) {
+  if (notificacoes === 0 && num > 0) {
+  // Adiciona badge
+  // container.appendChild(badge)...
+  }
+
+      if (notificacoes !== 0 && num > 0) {
+        // Apenas muda o número
+        // badge.innerHTML = num...
+      }
+
+      if (notificacoes !== 0 && num === 0) {
+        //Remove badge
+        // container.removeChild(badge)
+      }
+
+  }
+  ]
+
+  Exemplo Declarativo
+  [
+  //Não comparamos com o estado anterior
+
+  function Badge({ num }) {
+  return (
+  <div id="container">
+  { num > 0 && <div id="badge">{num}</div>}
+  <span class="icon"></span>
+  </div>
+  );
+  }
+  ]
+
+  Babel/Webpack
+  *O browser não entende todo esse código;
+  *O Babel converte o código JS de uma forma que o browser entenda;
+  *O Webpack possui várias funções:
+  *Criação do bundle, arquivo com todo código da aplicação;
+  \*Ensinar ao JavaScript com importar arquivos CSS, imagens e etc;
+  Live reload com Webpack Dev Server;
+
+--Configurando Babel
+Ouviu falar do "create-react-app";
+yarn init -y na pasta frontend;
+yarn add react react-dom
+São dois pacote um react e outro react-dom (web) e react-native (mobile);
+
+yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
+
+https://babeljs.io/docs/en/configuration
+
+yarn add @babel/cli
+yarn babel .\src\index.js --out-file .\public\bundle.js
+
+--Configurando Webpack
+yarn add babel-loader
+yarn webpack --mode development
+yarn add webpack-dev-server -D
+yarn webpack-dev-server --mode development
+
+/\*\*
+
+- Babel: Converter (transpilar) código do React para um código que o browser entenda.
+- Webpack: Pra cada tipo de arquivo (.js, .css, .png) eu vou converter o código de uma maneira diferente.
+- _É do Webpack os: Loaders: babel-loader, css-loader, image-loader, file-loader
+  _/
+
+--Componentização
+
+--Propriedades
+--Estado de Imutabilidade
+--Importando CSS e imagens
+--Listando Projetos da API
+--Cadastrando Projetos

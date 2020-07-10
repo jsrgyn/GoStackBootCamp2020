@@ -113,6 +113,7 @@ Manage Environments: dev {
   Interceptador de requisições que interromper totalmente a requisição ou alterar dados da requisição.
   //Middleware
   function validadeProjectId(request, response, next)
+
   @Front-end com ReactJS
   --Conceitos ReactJS
   O que é React?
@@ -236,6 +237,11 @@ yarn init -y na pasta frontend;
 yarn add react react-dom
 São dois pacote um react e outro react-dom (web) e react-native (mobile);
 
+Babel: Converter (transpilar) código do React para um código que o browser entenda.
+Webpack: Pra cada tipo de arquivo (.js, .css, .png) eu vou converter o código de uma maneira diferente.
+
+É do Webpack os: Loaders: babel-loader, css-loader, image-loader, file-loader
+
 yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
 
 https://babeljs.io/docs/en/configuration
@@ -253,13 +259,21 @@ yarn webpack-dev-server --mode development
 
 - Babel: Converter (transpilar) código do React para um código que o browser entenda.
 - Webpack: Pra cada tipo de arquivo (.js, .css, .png) eu vou converter o código de uma maneira diferente.
-- _É do Webpack os: Loaders: babel-loader, css-loader, image-loader, file-loader
-  _/
+- -É do Webpack os: Loaders: babel-loader, css-loader, image-loader, file-loader
 
 --Componentização
-Parei para iniciar aqui.
+JSX: HTML dentro do JavaScript (Javascript XML)
+
 --Propriedades
+
 --Estado de Imutabilidade
+
 --Importando CSS e imagens
+yarn add style-loader css-loader
+yarn dev
+yarn add file-loader
+https://unsplash.com/
+
 --Listando Projetos da API
+Parei aqui.
 --Cadastrando Projetos

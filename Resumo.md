@@ -307,8 +307,8 @@ Várias bibliotecas não tem suporte para o Expo;
 O Expo liberou seu conjunto de ferramentas prontas para serem utilizadas com projetos que não utilizam Expo;
 --Configurando SDK
 https://react-native.rocketseat.dev/
-Parei em 1:40 minuto
 --Criando novo projeto
+Iniciar esta aula.
 --Diferenças do ReactJS
 --Listando projetos da API
 --Criando novos projetos

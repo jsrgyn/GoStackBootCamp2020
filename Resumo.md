@@ -275,5 +275,40 @@ yarn add file-loader
 https://unsplash.com/
 
 --Listando Projetos da API
-Parei aqui.
+yarn add axios
+yarn add cors [back-end]
+
 --Cadastrando Projetos
+yarn add @babel/plugin-transform-runtime -D
+
+@Mobile com React Native
+--Arquitetura React Native
+O que é React Native?
+*Versão do React para desenvolvimento mobile;
+*Multiplataforma;
+*Podemos manipular cada plataforma de forma diferente;
+*Interface nativa ou híbrida?
+*Código não é transpilado;
+*Outras plataformas migrando, Microsoft com Windows;
+Arquitetura
+JS --> Metro Bundler (packager) --> Bundle --> Bridge --> IOS ou Android;
+Sintaxe
+A declaração de componentes é igual ao web;
+Não usamos HTML e sim componentes próprios;
+Aplicamos estilo sem classes ou ID's;
+Todo texto é <Text/> não existe estilização própria;
+O que é Expo? Vamos Usar?
+*SDK com um conjunto funcionalidades prontas para usar (câmera, vídeo, integrações);
+*Não é necessários configurar emulador;
+
+Por que não vamos utilizar?
+\*Limitação sobre o controle do código nativo;
+Várias bibliotecas não tem suporte para o Expo;
+O Expo liberou seu conjunto de ferramentas prontas para serem utilizadas com projetos que não utilizam Expo;
+--Configurando SDK
+https://react-native.rocketseat.dev/
+Parei em 1:40 minuto
+--Criando novo projeto
+--Diferenças do ReactJS
+--Listando projetos da API
+--Criando novos projetos

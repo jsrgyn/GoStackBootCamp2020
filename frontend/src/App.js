@@ -1,5 +1,6 @@
 // import React from "react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import api from "./services/api";
 
 import "./App.css";
 
@@ -18,10 +19,12 @@ function App() {
   // return <Header />;
   // const projects = ["Desenvolvimento de app", "Front-end web"];
 
-  const [projects, setProjects] = useState([
-    "Desenvolvimento de app",
-    "Front-end web",
-  ]);
+  // const [projects, setProjects] = useState([
+  //   "Desenvolvimento de app",
+  //   "Front-end web",
+  // ]);
+
+  const [projects, setProjects] = useState([]);
 
   /***
    * useState retorna um array com 2 posições
@@ -31,12 +34,36 @@ function App() {
    *
    */
 
-  function hendleAddProject() {
+  useEffect(() => {
+    api.get("projects").then((response) => {
+      //console.log(response);
+      setProjects(response.data);
+    });
+  }, []);
+
+  // function hendleAddProject() {
+  async function hendleAddProject() {
     // projects.push(`Novo projeto ${Date.now()}`);
 
-    setProjects([...projects, `Novo projeto ${Date.now()}`]);
+    // setProjects([...projects, `Novo projeto ${Date.now()}`]);
 
-    console.log(projects);
+    // api.post("projects", {
+    //   title: `Novo projeto ${Date.now()}`,
+    //   owner: "Diego Fernandes",
+    // });
+
+    const response = await api.post("projects", {
+      title: `Novo projeto ${Date.now()}`,
+      owner: "Diego Fernandes",
+    });
+
+    const project = response.data;
+
+    console.log("response.data:", response.data);
+
+    setProjects([...projects, project]);
+
+    // console.log(projects);
   }
 
   return (
@@ -73,7 +100,8 @@ function App() {
       <ul>
         {projects.map((project) => (
           // <li>{project}</li>
-          <li key={project}>{project}</li>
+          // <li key={project}>{project}</li>
+          <li key={project.id}>{project.title}</li>
         ))}
       </ul>
 

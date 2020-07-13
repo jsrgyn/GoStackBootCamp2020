@@ -308,7 +308,39 @@ O Expo liberou seu conjunto de ferramentas prontas para serem utilizadas com pro
 --Configurando SDK
 https://react-native.rocketseat.dev/
 --Criando novo projeto
-Iniciar esta aula.
+npm install -g react-native-cli
+react-native init mobile
+Run instructions for iOS:
+• cd "C:\Cursos\www\GoStackBootCamp2020\mobile" && npx react-native run-ios - or -
+• Open mobile\ios\mobile.xcodeproj in Xcode or run "xed -b ios"
+• Hit the Run button
+
+Run instructions for Android:
+• Have an Android emulator running (quickest way to get started), or a device connected.
+• cd "C:\Cursos\www\GoStackBootCamp2020\mobile" && npx react-native run-android
+
+Run instructions for Windows and macOS:
+• See https://aka.ms/ReactNative for the latest up-to-date instructions.
+
+Em um terminal "npm start"
+
+Em outro terminal "npx react-native run-android"
 --Diferenças do ReactJS
---Listando projetos da API
---Criando novos projetos
+
+- Não possuem valor semântico (significado)
+- Não possuem estilização própria.
+- Todos componentes possuem por padrão "display: flex"
+-
+- View: div, footer, reader, main, aside, section...
+- Text: p, span, strong, h1, h2, h3
+  --Listando projetos da API
+  yarn add axios
+
+  localhost pelo emulador android "adb reverse tcp:3333 tcp:3333"
+  --Criando novos projetos
+  @TypeScript
+  --Por que Typescript?
+  --Configurando o projeto
+  --Quando adicionar tipos
+  --Tipando objetos e vetores
+  --Gria Typescript

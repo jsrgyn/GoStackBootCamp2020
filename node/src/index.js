@@ -3,6 +3,8 @@ const express = require("express");
 const { uuid, isUuid } = require("uuidv4");
 const { response } = require("express");
 
+const cors = require("cors");
+
 const app = express();
 
 /**
@@ -37,6 +39,12 @@ const app = express();
  */
 
 //Configurando o express para receber JSON e identificar.
+// app.use(cors({
+//   origin: 'http://localhost:3000'
+// }));
+
+app.use(cors({}));
+
 app.use(express.json());
 
 const projects = [];
@@ -109,7 +117,8 @@ app.post("/projects", (request, response) => {
   projects.push(project);
 
   // return response.json(["Projeto 1", "Projeto 2", "Projeto 3"]);
-  return response.json(projects);
+  // return response.json(projects);
+  return response.json(project);
 });
 
 // app.put("/projects/:id", (request, response) => {

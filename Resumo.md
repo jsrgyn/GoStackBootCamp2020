@@ -113,3 +113,234 @@ Manage Environments: dev {
   Interceptador de requisições que interromper totalmente a requisição ou alterar dados da requisição.
   //Middleware
   function validadeProjectId(request, response, next)
+
+  @Front-end com ReactJS
+  --Conceitos ReactJS
+  O que é React?
+  *Biblioteca para construção de interfaces;
+  *Utilizado para construção de Single-Page Applications;
+  *Podemos chamar de framework?
+  *Tudo fica dentro do Javascript;
+  \*React/ReactJS / React Native;
+  Exemplo do react
+  [
+  import React from 'react';
+
+      import './button.css';
+      import icon from './button.png'
+
+      function Button() {
+        return (
+          <button>
+            <img src={icon} />
+          </button>
+        );
+      }
+
+  ]
+  Vantagens
+  *Organização do código;
+  *Componentização;
+  *Divisão de responsabilidades;
+  *Back-end: Regra de negócio
+  *Front-end: Interface
+  *Uma API, múltiplos clientes;
+  *Back-end --> Web --> Mobile;
+  *Programação declarativa;
+
+  JSX
+  *Escrever HTML dentro do JavaScript;
+  *Com React podemos criar nossos próprios elementos;
+
+  Exemplo sem JSX
+  [
+  //Antes
+  function Button() {
+  return React.createElement(
+  'button',
+  {React.createElement(
+  'span',
+  {class: 'icon'}
+  )
+  )
+  }
+  <button type="button">
+  <span class="icon"></span>
+  </button>
+  ]
+  Exemplo com JSX
+  [
+  //Com JSX
+  function Button() {
+  return (
+  <button type="button">
+  <span class="icon"></span>
+  </button>
+  )
+  }
+  ]
+
+  //Nossos próprios elementos
+  //(componentes)
+  function Header() {
+  return <Button />
+  }
+
+  Programação Imperativo vc declarativo
+  Exemplo Imperativo
+  [
+  const notificacoes = 0;
+  function montaBadge(num) {
+  if (notificacoes === 0 && num > 0) {
+  // Adiciona badge
+  // container.appendChild(badge)...
+  }
+
+      if (notificacoes !== 0 && num > 0) {
+        // Apenas muda o número
+        // badge.innerHTML = num...
+      }
+
+      if (notificacoes !== 0 && num === 0) {
+        //Remove badge
+        // container.removeChild(badge)
+      }
+
+  }
+  ]
+
+  Exemplo Declarativo
+  [
+  //Não comparamos com o estado anterior
+
+  function Badge({ num }) {
+  return (
+  <div id="container">
+  { num > 0 && <div id="badge">{num}</div>}
+  <span class="icon"></span>
+  </div>
+  );
+  }
+  ]
+
+  Babel/Webpack
+  *O browser não entende todo esse código;
+  *O Babel converte o código JS de uma forma que o browser entenda;
+  *O Webpack possui várias funções:
+  *Criação do bundle, arquivo com todo código da aplicação;
+  \*Ensinar ao JavaScript com importar arquivos CSS, imagens e etc;
+  Live reload com Webpack Dev Server;
+
+--Configurando Babel
+Ouviu falar do "create-react-app";
+yarn init -y na pasta frontend;
+yarn add react react-dom
+São dois pacote um react e outro react-dom (web) e react-native (mobile);
+
+Babel: Converter (transpilar) código do React para um código que o browser entenda.
+Webpack: Pra cada tipo de arquivo (.js, .css, .png) eu vou converter o código de uma maneira diferente.
+
+É do Webpack os: Loaders: babel-loader, css-loader, image-loader, file-loader
+
+yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli
+
+https://babeljs.io/docs/en/configuration
+
+yarn add @babel/cli
+yarn babel .\src\index.js --out-file .\public\bundle.js
+
+--Configurando Webpack
+yarn add babel-loader
+yarn webpack --mode development
+yarn add webpack-dev-server -D
+yarn webpack-dev-server --mode development
+
+/\*\*
+
+- Babel: Converter (transpilar) código do React para um código que o browser entenda.
+- Webpack: Pra cada tipo de arquivo (.js, .css, .png) eu vou converter o código de uma maneira diferente.
+- -É do Webpack os: Loaders: babel-loader, css-loader, image-loader, file-loader
+
+--Componentização
+JSX: HTML dentro do JavaScript (Javascript XML)
+
+--Propriedades
+
+--Estado de Imutabilidade
+
+--Importando CSS e imagens
+yarn add style-loader css-loader
+yarn dev
+yarn add file-loader
+https://unsplash.com/
+
+--Listando Projetos da API
+yarn add axios
+yarn add cors [back-end]
+
+--Cadastrando Projetos
+yarn add @babel/plugin-transform-runtime -D
+
+@Mobile com React Native
+--Arquitetura React Native
+O que é React Native?
+*Versão do React para desenvolvimento mobile;
+*Multiplataforma;
+*Podemos manipular cada plataforma de forma diferente;
+*Interface nativa ou híbrida?
+*Código não é transpilado;
+*Outras plataformas migrando, Microsoft com Windows;
+Arquitetura
+JS --> Metro Bundler (packager) --> Bundle --> Bridge --> IOS ou Android;
+Sintaxe
+A declaração de componentes é igual ao web;
+Não usamos HTML e sim componentes próprios;
+Aplicamos estilo sem classes ou ID's;
+Todo texto é <Text/> não existe estilização própria;
+O que é Expo? Vamos Usar?
+*SDK com um conjunto funcionalidades prontas para usar (câmera, vídeo, integrações);
+*Não é necessários configurar emulador;
+
+Por que não vamos utilizar?
+\*Limitação sobre o controle do código nativo;
+Várias bibliotecas não tem suporte para o Expo;
+O Expo liberou seu conjunto de ferramentas prontas para serem utilizadas com projetos que não utilizam Expo;
+--Configurando SDK
+https://react-native.rocketseat.dev/
+--Criando novo projeto
+npm install -g react-native-cli
+react-native init mobile
+Run instructions for iOS:
+• cd "C:\Cursos\www\GoStackBootCamp2020\mobile" && npx react-native run-ios - or -
+• Open mobile\ios\mobile.xcodeproj in Xcode or run "xed -b ios"
+• Hit the Run button
+
+Run instructions for Android:
+• Have an Android emulator running (quickest way to get started), or a device connected.
+• cd "C:\Cursos\www\GoStackBootCamp2020\mobile" && npx react-native run-android
+
+Run instructions for Windows and macOS:
+• See https://aka.ms/ReactNative for the latest up-to-date instructions.
+
+Em um terminal "npm start"
+
+Em outro terminal "npx react-native run-android"
+--Diferenças do ReactJS
+
+- Não possuem valor semântico (significado)
+- Não possuem estilização própria.
+- Todos componentes possuem por padrão "display: flex"
+-
+- View: div, footer, reader, main, aside, section...
+- Text: p, span, strong, h1, h2, h3
+  --Listando projetos da API
+  yarn add axios
+
+  localhost pelo emulador android "adb reverse tcp:3333 tcp:3333"
+  --Criando novos projetos
+  @TypeScript
+  --Por que Typescript?
+  --Configurando o projeto
+  --Quando adicionar tipos
+  --Tipando objetos e vetores
+  --Gria Typescript

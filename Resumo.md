@@ -340,7 +340,23 @@ Em outro terminal "npx react-native run-android"
   --Criando novos projetos
   @TypeScript
   --Por que Typescript?
+  Por que TypeScript?
   --Configurando o projeto
+  Configurando um projeto NodeJs
+  yarn init -y
+  yarn add typescript -D
+  yarn add express
+  Com os 3 pontinhos "..."
+  yarn add -D @types/express
+  O comando "node .\src\index.ts" com TypeScript não funciona.
+  Agora é "yarn tsc .\src\index.ts".
+  Criando a inicialização da configuração TypeScript: yarn tsc --init
+  yarn tsc
+  node .\src\index.js
+  Descomenta do arquivo tsconfig.json a linha: "outDir": "./dist" /_ Redirect output structure to the directory. _/,
   --Quando adicionar tipos
+  import { Request, Response } from "express";
   --Tipando objetos e vetores
+
   --Gria Typescript
+  https://www.notion.so/Typescript-5712aeab312d44fcba0aa88895caad36

@@ -357,5 +357,6 @@ Em outro terminal "npx react-native run-android"
   --Quando adicionar tipos
   import { Request, Response } from "express";
   --Tipando objetos e vetores
-  Parei no tempo 01:41.
+
   --Gria Typescript
+  https://www.notion.so/Typescript-5712aeab312d44fcba0aa88895caad36

@@ -360,3 +360,139 @@ Em outro terminal "npx react-native run-android"
 
   --Gria Typescript
   https://www.notion.so/Typescript-5712aeab312d44fcba0aa88895caad36
+
+  ##Nível 02
+  @Primeiro projeto com Node.js
+  ---Estrutura e padrões  
+   --Configurando estrutura
+  yarn init -y
+  yarn add express
+  yarn add typescript -D
+  yarn tsc --init
+  yarn tsc
+  yarn add @types/express -D
+  yarn tsc
+  node .\dist\server.js
+  yarn add ts-node-dev -D
+  yarn ts-node-dev src/server.ts
+  yarn dev:server
+  yarn ts-node-dev --transpile-only src/server.ts [--transpileOnly]
+  yarn ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts
+  --Padrões de Projeto com Eslint, Prrettier e Editor Config
+  https://www.notion.so/Padr-es-de-projeto-com-ESLint-Prettier-e-EditorConfig-0b57b47a24724c859c0cf226aa0cc3a7
+  https://www.notion.so/EditorConfig-5f494ae4b47248c1b16681ff74d6766c
+  Extensão no VSCode chamada EditorConfig for VS Code
+  Selecionar a opção Generate .editorconfig
+  .editorconfig com o seguinte conteúdo:
+  "
+  root = true
+
+  [*]
+  indent_style = space
+  indent_size = 2
+  charset = utf-8
+  trim_trailing_whitespace = false
+  insert_final_newline = true
+  end_of_line = lf
+  "
+  https://www.notion.so/ESLint-7e455a7ac78b424892329ee064feaf99#c409582eaf2d4407af000437ac25082a
+  Instalar a extensão do Eslint no VSCode.
+  "editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+  }
+  Settings:
+  "editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+  },
+  yarn add eslint@6.8.0 -D
+  yarn eslint --init
+  -->To check syntax, find problems and enforce code style
+  -->Javascript modules (import/export)
+  -->None of these
+  -->Yes
+  -->Node
+  -->Use a popular style guide
+  -->Airbnb
+  -->JSON
+  -->NPM é Yes, Yarn é No.
+  yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
+  Criar na raiz do projeto um arquivo .eslintignore
+  "
+  /\*.js
+  node_modules
+  dist
+  "
+  Começar a configuração do arquivo ".eslintrc.json" adicionar dentro de "extends" a linha: "plugin:@typescript-eslint/recommended"
+  yarn add eslint-import-resolver-typescript -D
+  Logo abaixo das "rules"
+  "
+  "settings": {
+  "import/resolver": {
+  "typescript": {}
+  }
+  }
+  "
+  Dentro das "rules":
+  "
+  "import/extensions": [
+  "error",
+  "ignorePackages",
+  {
+  "ts": "never"
+  }
+  ]  
+   "
+  O arquivo `.eslintrc.json` finalizado com todas as mudanças tem que ficar assim:
+  "
+  {
+  "env": {
+  "es2020": true,
+  "node": true
+  },
+  "extends": [
+  "airbnb-base",
+  "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+  "ecmaVersion": 2018,
+  "sourceType": "module"
+  },
+  "plugins": [
+  "@typescript-eslint"
+  ],
+  "rules": {
+  "import/extensions": [
+  "error",
+  "ignorePackages",
+  {
+  "ts": "never"
+  }
+  ]
+  },
+  "settings": {
+  "import/resolver": {
+  "typescript": {}
+  }
+  }
+  }
+
+  "
+  https://www.notion.so/Prettier-e2c6a3ec188c4cce8890a3e16a0d6425#da104f9b05964ec1aaac067ab2bf8a54
+  yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+--Debugando Node.JS
+// "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+"dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
+---Construindo Aplicação
+--Layout da Aplicação
+figma.com/
+--Cadastro de Agendamentos
+Parei aqui.
+--Validando a data
+--Model de Agendamento
+--Criando repositórios
+--Listando Agendamentos
+--Trabalhando com dados
+--Services & SOLID
+--Repositórios, services & patterns

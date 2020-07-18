@@ -488,9 +488,13 @@ Em outro terminal "npx react-native run-android"
 --Layout da Aplicação
 figma.com/
 --Cadastro de Agendamentos
-Parei aqui.
+insomnia -> Create New Workspace "GoBarber Bootcamp" new Folder "Appointments"
+{{ base_url }}/appointments
 
+yarn add uuidv4
 --Validando a data
+Parei aqui
+
 --Model de Agendamento
 --Criando repositórios
 --Listando Agendamentos

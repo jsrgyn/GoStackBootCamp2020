@@ -489,6 +489,7 @@ Em outro terminal "npx react-native run-android"
 figma.com/
 --Cadastro de Agendamentos
 Parei aqui.
+
 --Validando a data
 --Model de Agendamento
 --Criando repositórios

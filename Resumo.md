@@ -499,7 +499,19 @@ yarn add date-fns
 // Persistência <--> Repositório <--> Rota
 // Repositório: find, create...
 --Listando Agendamentos
-Parei aqui
+// SoC: Separation of Concerns (Separação de preocupações)
 --Trabalhando com dados
+// DTO - Data Transfer Object (Transferindo um objetos de dados);
 --Services & SOLID
---Repositórios, services & patterns
+// Rota: Receber a requisição, chamar outro arquivo, devolver uma resposta.
+Dependency Inversion (SOLID)
+
+- [x] - Recebimento das informações
+- [x] - Tratativa de erros/excessões
+- [x] - Acesso ao repositório
+    DRY: Don't repeat Yourself {Não repita as regras de negocio}
+    SOLID:
+    Single Responsability Principle
+    Dependency Invertion Principle
+    --Repositórios, services & patterns
+    https://www.notion.so/Repository-service-e-patterns-82419cceb11c4c4fbbc055ade7fb1ac5

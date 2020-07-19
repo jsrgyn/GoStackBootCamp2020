@@ -493,11 +493,13 @@ insomnia -> Create New Workspace "GoBarber Bootcamp" new Folder "Appointments"
 
 yarn add uuidv4
 --Validando a data
-Parei aqui
-
+yarn add date-fns
 --Model de Agendamento
 --Criando repositórios
+// Persistência <--> Repositório <--> Rota
+// Repositório: find, create...
 --Listando Agendamentos
+Parei aqui
 --Trabalhando com dados
 --Services & SOLID
 --Repositórios, services & patterns

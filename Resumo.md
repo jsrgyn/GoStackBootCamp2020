@@ -488,12 +488,30 @@ Em outro terminal "npx react-native run-android"
 --Layout da Aplicação
 figma.com/
 --Cadastro de Agendamentos
-Parei aqui.
+insomnia -> Create New Workspace "GoBarber Bootcamp" new Folder "Appointments"
+{{ base_url }}/appointments
 
+yarn add uuidv4
 --Validando a data
+yarn add date-fns
 --Model de Agendamento
 --Criando repositórios
+// Persistência <--> Repositório <--> Rota
+// Repositório: find, create...
 --Listando Agendamentos
+// SoC: Separation of Concerns (Separação de preocupações)
 --Trabalhando com dados
+// DTO - Data Transfer Object (Transferindo um objetos de dados);
 --Services & SOLID
---Repositórios, services & patterns
+// Rota: Receber a requisição, chamar outro arquivo, devolver uma resposta.
+Dependency Inversion (SOLID)
+
+- [x] - Recebimento das informações
+- [x] - Tratativa de erros/excessões
+- [x] - Acesso ao repositório
+    DRY: Don't repeat Yourself {Não repita as regras de negocio}
+    SOLID:
+    Single Responsability Principle
+    Dependency Invertion Principle
+    --Repositórios, services & patterns
+    https://www.notion.so/Repository-service-e-patterns-82419cceb11c4c4fbbc055ade7fb1ac5

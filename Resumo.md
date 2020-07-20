@@ -515,3 +515,94 @@ Dependency Inversion (SOLID)
     Dependency Invertion Principle
     --Repositórios, services & patterns
     https://www.notion.so/Repository-service-e-patterns-82419cceb11c4c4fbbc055ade7fb1ac5
+
+@Iniciando back-end do app
+---Banco de dados
+--Estratégias de abstração
+https://node-postgres.com/
+http://knexjs.org/
+Object Relational Mapping
+https://sequelize.org/ (Javascript)
+https://typeorm.io/#/ (TypeScript)
+--Conceitos Docker
+Como funciona?
+
+- Criação de ambientes isolados (container);
+- Containers expõe portas para comunicação;
+  Principais conceitos.
+- Imagem
+- Container
+- Docker Registry (Docker Hub)
+- Dockerfile
+  - Receita de uma imagem;
+
+# Partimos de uma imagem existente
+
+FROM node:10
+
+# Definimos a pasta e copiamos o arquivos
+
+WORKDIR /usr/app
+COPY . ./
+
+# Instalamos as dependências
+
+RUN yarn
+
+# Qual porta queremos expor?
+
+EXPOSE 3333
+
+# Executamos nossa aplicação
+
+CMD yarn start
+
+--Instalando Docker
+https://www.notion.so/Instalando-Docker-6290d9994b0b4555a153576a1d97bee2
+--Criando container do banco
+https://hub.docker.com/_/postgres
+Para ver as portas disponivel no windows: "netstat -a -b".
+docker run --name gostack_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+Para listar as docker execultado: "docker ps"
+Para listar todos os container do host: "docker ps -a"
+Para ver os logs de um container: "docker logs 5e8194c46a5c" (docker logs + id)
+Para parar um container: "docker stop c2ada45c3b9a" (docker stop + id)
+Para iniciar um container: "docker start 5e8194c46a5c" (docker start + id)
+https://dbeaver.io/ ou https://www.electronjs.org/apps/postbird
+
+--Configurando TypeORM
+https://typeorm.io/#/
+yarn add typeorm pg
+yarn typeorm
+
+--Criando tabela de agendamentos
+yarn typeorm
+yarn typeorm migration:create -n CreateAppointments
+yarn typeorm migration:run
+yarn typeorm migration:revert
+yarn typeorm migration:show
+
+--Criando model de agendamentos
+Desativa duas opções "/_ Experimental Options _/" do arquivo tsconfig.json
+Ativar e alterar a opção ""strictPropertyInitialization":" no arquivo tsconfig.json
+
+--Repositório do TypeORM
+Parei aqui 6 min.
+
+---Cadastro de Usuários
+--Model e migration de usuários
+--Relacionamento nos models
+--Criação de registros
+--Criptografia de senha
+---Autenticação
+--Conceitos de JWT
+--Validando credenciais
+--Gerando token JWT
+--Rotas autenticadas
+---Upload de imgagens
+--Upload de arquivos
+--Atualizando avatar
+--Servindo arquivos estáticos
+---Tratando exceções
+--Criando classe de erro
+--Lidando com erros

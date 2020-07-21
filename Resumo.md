@@ -587,7 +587,10 @@ Desativa duas opções "/_ Experimental Options _/" do arquivo tsconfig.json
 Ativar e alterar a opção ""strictPropertyInitialization":" no arquivo tsconfig.json
 
 --Repositório do TypeORM
-Parei aqui 6 min.
+yarn add reflect-metadata
+yarn typeorm migration:revert
+yarn typeorm migration:run
+Documentação TypeORM: https://typeorm.io/#/repository-api
 
 ---Cadastro de Usuários
 --Model e migration de usuários

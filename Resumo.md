@@ -598,6 +598,8 @@ yarn typeorm migration:create -n CreateUsers
 yarn typeorm migration:run
 F1 (Ctrl+shift+p): Keybord Shortcuts "next match" para ver o comando para selecionar varias palavras e alterar tudo.
 yarn typeorm migration:revert
+
+--Relacionamento nos models
 yarn typeorm migration:create -n AlterProviderFieldToProviderId
 
     - Um para Um (OneToOne)
@@ -606,7 +608,6 @@ yarn typeorm migration:create -n AlterProviderFieldToProviderId
 
 KISS - Keep It Simple & Stupid
 
---Relacionamento nos models
 --Criação de registros
 --Criptografia de senha
 ---Autenticação

@@ -594,6 +594,18 @@ Documentação TypeORM: https://typeorm.io/#/repository-api
 
 ---Cadastro de Usuários
 --Model e migration de usuários
+yarn typeorm migration:create -n CreateUsers
+yarn typeorm migration:run
+F1 (Ctrl+shift+p): Keybord Shortcuts "next match" para ver o comando para selecionar varias palavras e alterar tudo.
+yarn typeorm migration:revert
+yarn typeorm migration:create -n AlterProviderFieldToProviderId
+
+    - Um para Um (OneToOne)
+    - Um para Muitos (OneToMany)
+    - Muitos para Muitos (ManyToMany)
+
+KISS - Keep It Simple & Stupid
+
 --Relacionamento nos models
 --Criação de registros
 --Criptografia de senha

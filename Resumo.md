@@ -609,12 +609,32 @@ yarn typeorm migration:create -n AlterProviderFieldToProviderId
 KISS - Keep It Simple & Stupid
 
 --Criação de registros
+No arquivo ".eslintrc.json" desligando o recurso: '"@typescript-eslint/camelcase": "off",'
 --Criptografia de senha
+yarn add bcryptjs
+yarn add -D @types/bcryptjs
+
 ---Autenticação
 --Conceitos de JWT
+/\* Autenticação JWT
+POST http://api.com/sessions
+Token JWT:
+Haaders(Tipo de token, algoritmo) 1º [Laranja]
+Payload (Dados adicionais) 2º [Rosa]
+Assinatura 3º [Verde]
+
 --Validando credenciais
+
 --Gerando token JWT
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
+http://www.md5.cz/
+Estudar "strategy refresh token" (site: https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
+Site para debulgar um token: https://jwt.io/
+
 --Rotas autenticadas
+Parei aqui.
+
 ---Upload de imgagens
 --Upload de arquivos
 --Atualizando avatar

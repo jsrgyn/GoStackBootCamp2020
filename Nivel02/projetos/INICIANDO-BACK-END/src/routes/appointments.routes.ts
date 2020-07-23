@@ -13,9 +13,14 @@ appointmentsRouter.get('/', async (request, response) => {
   return response.json(appointments);
 });
 
+// {
+// 	"provider_id": "5452cfc5-6394-4882-be8f-6e846ab46133",
+// 	"date": "{% now 'iso-8601', '' %}"
+// }
+
 appointmentsRouter.post('/', async (request, response) => {
   try {
-    const { provider, date } = request.body;
+    const { provider_id, date } = request.body;
 
     const parsedDate = parseISO(date);
 
@@ -23,7 +28,7 @@ appointmentsRouter.post('/', async (request, response) => {
 
     const appointment = await createAppointment.execute({
       date: parsedDate,
-      provider,
+      provider_id,
     });
 
     return response.json(appointment);

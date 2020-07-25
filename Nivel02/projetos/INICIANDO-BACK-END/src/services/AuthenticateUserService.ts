@@ -1,6 +1,7 @@
 import { getRepository } from 'typeorm';
 import { compare } from 'bcryptjs';
-import { sign, verify } from 'jsonwebtoken';
+import { sign } from 'jsonwebtoken';
+import authConfig from '../config/auth';
 
 import User from '../models/User';
 
@@ -40,9 +41,21 @@ class AuthenticateUserService {
      */
     // experiência / segurança... Estudar "strategy refresh token" (site: https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
 
-    const token = sign({}, 'a569a2272564c439c6ade76325adeb9c', {
+    // const token = sign({}, 'a569a2272564c439c6ade76325adeb9c', {
+    //   subject: user.id,
+    //   expiresIn: '1d',
+    // });
+
+    // const token = sign({}, authConfig.jwt.secret, {
+    //   subject: user.id,
+    //   expiresIn: authConfig.jwt.expiresIn,
+    // });
+
+    const { secret, expiresIn } = authConfig.jwt;
+
+    const token = sign({}, secret, {
       subject: user.id,
-      expiresIn: '1d',
+      expiresIn,
     });
 
     return {

@@ -633,12 +633,22 @@ Estudar "strategy refresh token" (site: https://auth0.com/blog/refresh-tokens-wh
 Site para debulgar um token: https://jwt.io/
 
 --Rotas autenticadas
-Parei aqui.
+No Manage Environments do Insomnia incluir o Token: "{
+"base_url": "http://localhost:3333",
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU2MjQ4NzYsImV4cCI6MTU5NTcxMTI3Niwic3ViIjoiYTlkZTdiN2ItNmM3Ny00YjU4LWFhODItMmZhYjUwMzU5MDYzIn0.RE9Rt2Fetn57O4rr5jHewmsWoeeR_i90JyzUp6O47cQ"
+}"
 
 ---Upload de imgagens
 --Upload de arquivos
+yarn typeorm migration:create -n AddAvatarFieldToUsers
+yarn typeorm migration:run
+yarn add multer
+yarn add -D @types/multer
+
 --Atualizando avatar
 --Servindo arquivos estáticos
+Parei aqui...
+
 ---Tratando exceções
 --Criando classe de erro
 --Lidando com erros

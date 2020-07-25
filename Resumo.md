@@ -594,18 +594,61 @@ Documentação TypeORM: https://typeorm.io/#/repository-api
 
 ---Cadastro de Usuários
 --Model e migration de usuários
+yarn typeorm migration:create -n CreateUsers
+yarn typeorm migration:run
+F1 (Ctrl+shift+p): Keybord Shortcuts "next match" para ver o comando para selecionar varias palavras e alterar tudo.
+yarn typeorm migration:revert
+
 --Relacionamento nos models
+yarn typeorm migration:create -n AlterProviderFieldToProviderId
+
+    - Um para Um (OneToOne)
+    - Um para Muitos (OneToMany)
+    - Muitos para Muitos (ManyToMany)
+
+KISS - Keep It Simple & Stupid
+
 --Criação de registros
+No arquivo ".eslintrc.json" desligando o recurso: '"@typescript-eslint/camelcase": "off",'
 --Criptografia de senha
+yarn add bcryptjs
+yarn add -D @types/bcryptjs
+
 ---Autenticação
 --Conceitos de JWT
+/\* Autenticação JWT
+POST http://api.com/sessions
+Token JWT:
+Haaders(Tipo de token, algoritmo) 1º [Laranja]
+Payload (Dados adicionais) 2º [Rosa]
+Assinatura 3º [Verde]
+
 --Validando credenciais
+
 --Gerando token JWT
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
+http://www.md5.cz/
+Estudar "strategy refresh token" (site: https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
+Site para debulgar um token: https://jwt.io/
+
 --Rotas autenticadas
+No Manage Environments do Insomnia incluir o Token: "{
+"base_url": "http://localhost:3333",
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU2MjQ4NzYsImV4cCI6MTU5NTcxMTI3Niwic3ViIjoiYTlkZTdiN2ItNmM3Ny00YjU4LWFhODItMmZhYjUwMzU5MDYzIn0.RE9Rt2Fetn57O4rr5jHewmsWoeeR_i90JyzUp6O47cQ"
+}"
+
 ---Upload de imgagens
 --Upload de arquivos
+yarn typeorm migration:create -n AddAvatarFieldToUsers
+yarn typeorm migration:run
+yarn add multer
+yarn add -D @types/multer
+
 --Atualizando avatar
 --Servindo arquivos estáticos
+Parei aqui...
+
 ---Tratando exceções
 --Criando classe de erro
 --Lidando com erros

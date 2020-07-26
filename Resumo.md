@@ -647,8 +647,16 @@ yarn add -D @types/multer
 
 --Atualizando avatar
 --Servindo arquivos estáticos
-Parei aqui...
+app.use('/files', express.static(uploadConfig.directory));
 
 ---Tratando exceções
 --Criando classe de erro
+// Exception Handling
+
 --Lidando com erros
+yarn add express-async-errors
+No arquivo .eslintrc.json incluir o parametro para ignorar var com nome "-""
+"@typescript-eslint/no-unused-vars": ["error", {
+"argsIngorePattern": "-"
+}],
+"

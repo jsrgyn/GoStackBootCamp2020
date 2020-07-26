@@ -24,23 +24,23 @@ const upload = multer(uploadConfig);
 // Token: "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTU2MjQ4NzYsImV4cCI6MTU5NTcxMTI3Niwic3ViIjoiYTlkZTdiN2ItNmM3Ny00YjU4LWFhODItMmZhYjUwMzU5MDYzIn0.RE9Rt2Fetn57O4rr5jHewmsWoeeR_i90JyzUp6O47cQ"
 
 usersRouter.post('/', async (request, response) => {
-  try {
-    const { name, email, password } = request.body;
+  // try {
+  const { name, email, password } = request.body;
 
-    const createUser = new CreateUserService();
+  const createUser = new CreateUserService();
 
-    const user = await createUser.execute({
-      name,
-      email,
-      password,
-    });
+  const user = await createUser.execute({
+    name,
+    email,
+    password,
+  });
 
-    delete user.password;
+  delete user.password;
 
-    return response.json(user);
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
+  return response.json(user);
+  // } catch (err) {
+  //   return response.status(400).json({ error: err.message });
+  // }
 });
 
 // Atualizando uma unica informação do usuário: patch
@@ -50,25 +50,25 @@ usersRouter.patch(
   upload.single('avatar'),
   async (request, response) => {
     // return response.json({ ok: true });
-    try {
-      console.log(request.file);
+    // try {
+    console.log(request.file);
 
-      const updateUserAvatar = new UpdateUserAvatarService();
+    const updateUserAvatar = new UpdateUserAvatarService();
 
-      const user = await updateUserAvatar.execute({
-        user_id: request.user.id,
-        avatarFilename: request.file.filename,
-      });
+    const user = await updateUserAvatar.execute({
+      user_id: request.user.id,
+      avatarFilename: request.file.filename,
+    });
 
-      console.log(request.file.filename);
+    console.log(request.file.filename);
 
-      delete user.password;
+    delete user.password;
 
-      // return response.json({ ok: true });
-      return response.json(user);
-    } catch (err) {
-      return response.status(400).json({ error: err.message });
-    }
+    // return response.json({ ok: true });
+    return response.json(user);
+    // } catch (err) {
+    //   return response.status(400).json({ error: err.message });
+    // }
   },
 );
 

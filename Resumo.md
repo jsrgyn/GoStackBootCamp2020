@@ -660,3 +660,43 @@ No arquivo .eslintrc.json incluir o parametro para ignorar var com nome "-""
 "argsIngorePattern": "-"
 }],
 "
+
+##Nível 03
+@Primeiro projeto com React
+---Estrutura e padrões  
+ --Criando projeto
+npx create-react-app 05-primeiro-projeto-react --template=typescript
+yarn start
+--Padrões de Projeto com Eslint, Prettier e Editor Config
+https://www.notion.so/Padr-es-de-projeto-com-ESLint-Prettier-e-EditorConfig-0b57b47a24724c859c0cf226aa0cc3a7
+https://www.notion.so/EditorConfig-5f494ae4b47248c1b16681ff74d6766c
+https://www.notion.so/ESLint-7e455a7ac78b424892329ee064feaf99#c409582eaf2d4407af000437ac25082a
+yarn add eslint@6.8.0 -D
+yarn add @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.21.2 @typescript-eslint/parser@latest -D
+yarn add eslint-import-resolver-typescript -D
+Remover do arquivo packege.json "
+"eslintConfig": {
+"extends": "react-app"
+},
+"
+yarn add eslint@6.8.0 -D
+yarn eslint --init
+yarn add eslint-plugin-react@^7.19.0 @typescript-eslint/eslint-plugin@latest eslint-config-airbnb@latest eslint-plugin-import@^2.20.1 eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react-hooks@^2.5.0 @typescript-eslint/parser@latest -D
+https://www.notion.so/Prettier-e2c6a3ec188c4cce8890a3e16a0d6425#da104f9b05964ec1aaac067ab2bf8a54
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+--Figma Github Exprorer
+https://www.figma.com/file/HOCmxfrElzLpI75LdzFLia/Github-Explorer?node-id=0%3A1
+---Criando a aplicação
+--Criando Rotas
+https://reactrouter.com/web/guides/quick-start
+yarn add react-router-dom
+yarn add @types/react-router-dom -D
+
+--Utilizando Styled Components
+--Estilizando Dashboard
+--Conectando a API
+--Lidando com erros
+--Salvando no Storage
+--Navegando entre rotas
+--Estilizando Detalhe
+--Listando issues da API

@@ -693,7 +693,16 @@ yarn add react-router-dom
 yarn add @types/react-router-dom -D
 
 --Utilizando Styled Components
+yarn add styled-components
+yarn add @types/styled-components -D
+Visual Studio Code -> Instalar a extenção do "styled-components" o 'vscode-styled-components';
+
 --Estilizando Dashboard
+Video sobre os conseitos de CSS: border-box -> https://www.youtube.com/watch?v=nhW70H9H4gU
+Repositorio de fonts: https://fonts.google.com/specimen/Roboto?query=roboto
+yarn add polished
+yarn add react-icons
+
 --Conectando a API
 --Lidando com erros
 --Salvando no Storage

@@ -3,14 +3,21 @@ import React from 'react';
 // import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 
+import GlobalStyle from './styles/global';
 import Routes from './routes';
 
 // function App() {
 // const App: React.FC = () => <Routes />;
 const App: React.FC = () => (
-  <BrowserRouter>
-    <Routes />
-  </BrowserRouter>
+  // <BrowserRouter>
+  //   <Routes />
+  // </BrowserRouter>
+  <>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+    <GlobalStyle />
+  </>
 );
 // {
 //   return <Routes />;

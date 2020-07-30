@@ -704,7 +704,18 @@ yarn add polished
 yarn add react-icons
 
 --Conectando a API
+yarn add axios
+https://api.github.com/
+Incluir a seguinte confinte configuração:
+"@typescript-eslint/explicit-function-return-type": [
+"error",
+{
+"allowExpressions": true
+}
+],
+
 --Lidando com erros
+Parei aqui
 --Salvando no Storage
 --Navegando entre rotas
 --Estilizando Detalhe

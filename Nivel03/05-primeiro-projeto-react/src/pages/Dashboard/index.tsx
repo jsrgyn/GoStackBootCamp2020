@@ -6,7 +6,8 @@ import api from '../../services/api';
 import logoImg from '../../assets/logo.svg';
 
 // import './styles.css';
-import { Title, Form, Repositories } from './styles';
+// import { Title, Form, Repositories } from './styles';
+import { Title, Form, Repositories, Error } from './styles';
 
 interface Repository {
   full_name: string;
@@ -19,7 +20,11 @@ interface Repository {
 
 const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState('');
+  const [inputError, setInoutError] = useState('');
   const [repositories, setRepositories] = useState<Repository[]>([]);
+
+  // truthy, falsy ('string preenchida', numerico, {}, [])
+  // True,   False
 
   async function handleAddRepository(
     event: FormEvent<HTMLFormElement>,
@@ -30,15 +35,25 @@ const Dashboard: React.FC = () => {
     // Salvar novo repositório no estado
     console.log(newRepo);
 
-    // const response = await api.get(`repos/${newRepo}`);
-    const response = await api.get<Repository>(`repos/${newRepo}`);
+    if (!newRepo) {
+      setInoutError('Digite o autor/nome do repositório');
+      return;
+    }
 
-    console.log(response.data);
+    try {
+      // const response = await api.get(`repos/${newRepo}`);
+      const response = await api.get<Repository>(`repos/${newRepo}`);
 
-    const repository = response.data;
+      console.log(response.data);
 
-    setRepositories([...repositories, repository]);
-    setNewRepo('');
+      const repository = response.data;
+
+      setRepositories([...repositories, repository]);
+      setNewRepo('');
+      setInoutError('');
+    } catch (err) {
+      setInoutError('Erro na busca por esse repositório');
+    }
   }
 
   // return <h1>Dashboard</h1>;
@@ -49,7 +64,7 @@ const Dashboard: React.FC = () => {
       <img src={logoImg} alt="Github Explorer" />
       <Title>Explore repositórios no Github</Title>
       {/* <Form> */}
-      <Form onSubmit={handleAddRepository}>
+      <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           // Rocketseat/unform
           // facebook/react
@@ -60,6 +75,11 @@ const Dashboard: React.FC = () => {
         />
         <button type="submit">Pesquisar</button>
       </Form>
+
+      {/* <Error>{inputError}</Error> */}
+
+      {/* Formula de if simplificado */}
+      {inputError && <Error>{inputError}</Error>}
 
       <Repositories>
         {/* <a href="teste">

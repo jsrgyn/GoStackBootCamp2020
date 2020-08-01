@@ -713,10 +713,9 @@ Incluir a seguinte confinte configuração:
 "allowExpressions": true
 }
 ],
-
 --Lidando com erros
-Parei aqui
 --Salvando no Storage
+estou aqui.
 --Navegando entre rotas
 --Estilizando Detalhe
 --Listando issues da API

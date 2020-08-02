@@ -715,7 +715,10 @@ Incluir a seguinte confinte configuração:
 ],
 --Lidando com erros
 --Salvando no Storage
-estou aqui.
 --Navegando entre rotas
+No arquivo ".eslintrc.json" incluir a seguinte configuração: "
+"prettier/prettier": "error",
+"react/jsx-one-expression-per-line": "off",
+"
 --Estilizando Detalhe
 --Listando issues da API

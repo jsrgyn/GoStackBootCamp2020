@@ -722,3 +722,42 @@ No arquivo ".eslintrc.json" incluir a seguinte configuração: "
 "
 --Estilizando Detalhe
 --Listando issues da API
+@Iniciando front-end web
+---Estrutura das páginas
+--Configurando Estrutura
+https://www.figma.com/file/BXCihtXXh9p37lGsENV614/GoBarber?node-id=34%3A1180
+@tiagoluchtenberg
+npx create-react-app 06-gobarber-web --template=typescript
+--Estilos globais
+yarn add styled-components
+yarn add @types/styled-components -D
+https://fonts.google.com/specimen/Roboto+Slab
+https://fonts.google.com/specimen/Roboto+Slab?sidebar.open=true&selection.family=Roboto+Slab:wght@400;500
+
+--Página de login
+Parei aqui...
+--Isolando componentes
+--Página de cadastro
+--Utilizando Unform
+--Usabilidade do input
+--Validando cadastro
+--Exibindo erros no input
+--Criando tooltip de erros
+--Validação de login
+---Autenticação
+--Habilitando CORS na API
+--API de Contexto
+--Guia de Hooks e Context API
+--Login pelo Contexto
+--Mantendo usuário no storage
+--Criando hook useAuth
+--Logout da aplicação
+---Mensagens de toast
+--Estrutura de Toasts
+--Criando hook de toast
+--Adicionando e removendo Toasts
+--Animando Toasts
+---Rotas da aplicação
+--Configurando Rotas
+--Rotas autenticadas
+--Finalizando App

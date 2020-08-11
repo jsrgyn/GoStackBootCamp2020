@@ -735,8 +735,11 @@ https://fonts.google.com/specimen/Roboto+Slab
 https://fonts.google.com/specimen/Roboto+Slab?sidebar.open=true&selection.family=Roboto+Slab:wght@400;500
 
 --Página de login
-Parei aqui...
+yarn add react-icons
+yarn add polished
+
 --Isolando componentes
+Parei aqui
 --Página de cadastro
 --Utilizando Unform
 --Usabilidade do input

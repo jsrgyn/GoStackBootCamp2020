@@ -739,8 +739,9 @@ yarn add react-icons
 yarn add polished
 
 --Isolando componentes
-Parei aqui
+
 --Página de cadastro
+Parei aqui
 --Utilizando Unform
 --Usabilidade do input
 --Validando cadastro

@@ -33,7 +33,7 @@ export const Content = styled.div`
       margin-bottom: 24px;
     }
 
-    input {
+    /* input {
       background: #232129;
       border-radius: 10px;
       border: 2px solid #232129;
@@ -48,8 +48,9 @@ export const Content = styled.div`
       & + input {
         margin-top: 8px;
       }
-    }
-    button {
+    } */
+
+    /* button {
       background: #ff9000;
       height: 56px;
       border-radius: 10px;
@@ -64,7 +65,7 @@ export const Content = styled.div`
       &:hover {
         background: ${shade(0.2, '#ff9000')};
       }
-    }
+    } */
 
     a {
       color: #f4ede8;

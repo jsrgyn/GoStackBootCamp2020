@@ -741,10 +741,13 @@ yarn add polished
 --Isolando componentes
 
 --Página de cadastro
-Parei aqui
 --Utilizando Unform
+yarn add @unform/core @unform/web
+
 --Usabilidade do input
+
 --Validando cadastro
+Parei aqui
 --Exibindo erros no input
 --Criando tooltip de erros
 --Validação de login

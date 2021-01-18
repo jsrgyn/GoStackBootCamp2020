@@ -747,8 +747,10 @@ yarn add @unform/core @unform/web
 --Usabilidade do input
 
 --Validando cadastro
-Parei aqui
+yarn add yup
+yarn add @types/yup -D
 --Exibindo erros no input
+Parei aqui em 4 minutos de vidio
 --Criando tooltip de erros
 --Validação de login
 ---Autenticação
